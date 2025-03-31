@@ -2,9 +2,9 @@ sum_even([], 0).
 sum_even([H|T], Sum) :-
     (H mod 2 =:= 0 -> sum_even(T, SumRest), Sum is H + SumRest ; sum_even(T, Sum)).
 
-% Стартовая точка программы
+% РЎС‚Р°СЂС‚РѕРІР°СЏ С‚РѕС‡РєР° РїСЂРѕРіСЂР°РјРјС‹
 start :-
-    write('Введите список (в формате [1,2,3,4]): '),
+    write('Р’РІРµРґРёС‚Рµ СЃРїРёСЃРѕРє (РІ С„РѕСЂРјР°С‚Рµ [1,2,3,4]): '),
     read(List),
     sum_even(List, SumEven),
-    write('Сумма чётных элементов: '), write(SumEven), nl.
+    write('РЎСѓРјРјР° С‡С‘С‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: '), write(SumEven), nl.
